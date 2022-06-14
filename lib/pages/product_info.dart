@@ -9,6 +9,10 @@ class ProductInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.blueGrey),
+          borderRadius: BorderRadius.circular(20),
+        ),
         padding: EdgeInsets.all(10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -65,14 +69,17 @@ class ProductInfo extends StatelessWidget {
                       onTap: () {
                         Navigator.pop(context);
                       },
-                      child: Container(
-                        height: 45,
-                        width: 50,
-                        decoration: BoxDecoration(
-                          color: Colors.blueGrey,
-                          borderRadius: BorderRadius.circular(15),
+                      child: Hero(
+                        tag: 'info',
+                        child: Container(
+                          height: 45,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            color: Colors.blueGrey,
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Icon(Icons.arrow_back_outlined),
                         ),
-                        child: Icon(Icons.arrow_back_outlined),
                       ),
                     ),
                     Container(
@@ -108,10 +115,10 @@ class ProductInfo extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  '4.1⭐',
+                  '4.1⭐ (54)',
                   style: TextStyle(
                     color: Colors.white70,
-                    fontSize: 25,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
