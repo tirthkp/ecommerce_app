@@ -64,39 +64,61 @@ class _HomePageState extends State<HomePage> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
+                      height: 45,
+                      width: 320,
                       decoration: BoxDecoration(
                         color: Colors.blueGrey,
                         borderRadius: BorderRadius.circular(30),
                       ),
-                      height: 45,
-                      // width: ,
                       child: Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 12, 12, 12),
-                        child: Row(
-                          children: [
-                            Icon(
-                              Icons.search_sharp,
-                              // color: Colors.grey,
-                              size: 25,
+                        padding: const EdgeInsets.only(left: 10),
+                        child: TextField(
+                          cursorColor: Colors.blueGrey[900],
+                          cursorHeight: 20,
+                          textAlign: TextAlign.start,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'I\'m Searching for...',
+                            hintStyle: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
                             ),
-                            SizedBox(
-                              width: 10,
+                            prefixIcon: Icon(
+                              Icons.search,
+                              size: 30,
+                              color: Colors.blueGrey[900],
                             ),
-                            Text(
-                              'I\'m searching for...            ',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.blueGrey[900],
-                              ),
-                            ),
-                          ],
+                          ),
                         ),
                       ),
+                      // width: ,
+                      // child: Padding(
+                      //   padding: const EdgeInsets.fromLTRB(20, 12, 12, 12),
+                      //   child: Row(
+                      //     children: [
+                      //       Icon(
+                      //         Icons.search_sharp,
+                      //         // color: Colors.grey,
+                      //         size: 25,
+                      //       ),
+                      //       SizedBox(
+                      //         width: 10,
+                      //       ),
+                      //       Text(
+                      //         'I\'m searching for...                  ',
+                      //         style: TextStyle(
+                      //           fontSize: 20,
+                      //           fontWeight: FontWeight.bold,
+                      //           color: Colors.blueGrey[900],
+                      //         ),
+                      //       ),
+                      //     ],
+                      //   ),
+                      // ),
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(right: 2),
                     child: Container(
                       height: 45,
                       width: 50,

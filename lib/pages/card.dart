@@ -18,11 +18,11 @@ class CardDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
-        right: 8,
-        left: 8,
+        right: 6,
+        left: 6,
       ),
       child: Container(
-        width: 350,
+        width: 345,
         height: 130,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),

@@ -12,14 +12,14 @@ class Categories extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
-        right: 20,
-        left: 10,
+        right: 10,
+        left: 4,
       ),
       child: Column(
         children: [
           Container(
-            height: 60,
-            width: 60,
+            height: 50,
+            width: 50,
             decoration: BoxDecoration(
               color: Colors.blueGrey,
               borderRadius: BorderRadius.circular(20),
@@ -36,7 +36,7 @@ class Categories extends StatelessWidget {
             text,
             style: TextStyle(
               color: Colors.grey,
-              fontSize: 20,
+              fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
           ),
