@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:ecommerce_app/pages/product_info.dart';
 import 'package:flutter/material.dart';
 
 class Products extends StatelessWidget {
@@ -16,50 +17,59 @@ class Products extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Container(
-        height: 325,
-        width: 180,
-        decoration: BoxDecoration(
-          color: Colors.blueGrey,
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Center(
-                child: Image.asset(
-                  imgpath,
-                  height: 200,
+      child: InkWell(
+        onTap: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => ProductInfo(),
+            ),
+          );
+        },
+        child: Container(
+          height: 325,
+          width: 180,
+          decoration: BoxDecoration(
+            color: Colors.blueGrey,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Center(
+                  child: Image.asset(
+                    imgpath,
+                    height: 200,
+                  ),
                 ),
-              ),
-              Text(
-                name,
-                style: TextStyle(
-                  // color: Colors.blueGrey[900],
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
+                Text(
+                  name,
+                  style: TextStyle(
+                    // color: Colors.blueGrey[900],
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-              Text(
-                '$rating⭐',
-                style: TextStyle(
-                  // color: Colors.blueGrey[900],
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
+                Text(
+                  '$rating⭐',
+                  style: TextStyle(
+                    // color: Colors.blueGrey[900],
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-              Text(
-                '\$$price',
-                style: TextStyle(
-                  // color: Colors.blueGrey[900],
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
+                Text(
+                  '\$$price',
+                  style: TextStyle(
+                    // color: Colors.blueGrey[900],
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
