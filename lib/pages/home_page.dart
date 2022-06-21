@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:ecommerce_app/pages/card.dart';
-import 'package:ecommerce_app/pages/categories.dart';
-import 'package:ecommerce_app/pages/products.dart';
+import 'package:ecommerce_app/utils/card.dart';
+import 'package:ecommerce_app/utils/categories.dart';
+import 'package:ecommerce_app/utils/products.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -91,30 +91,6 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
-                      // width: ,
-                      // child: Padding(
-                      //   padding: const EdgeInsets.fromLTRB(20, 12, 12, 12),
-                      //   child: Row(
-                      //     children: [
-                      //       Icon(
-                      //         Icons.search_sharp,
-                      //         // color: Colors.grey,
-                      //         size: 25,
-                      //       ),
-                      //       SizedBox(
-                      //         width: 10,
-                      //       ),
-                      //       Text(
-                      //         'I\'m searching for...                  ',
-                      //         style: TextStyle(
-                      //           fontSize: 20,
-                      //           fontWeight: FontWeight.bold,
-                      //           color: Colors.blueGrey[900],
-                      //         ),
-                      //       ),
-                      //     ],
-                      //   ),
-                      // ),
                     ),
                   ),
                   Padding(

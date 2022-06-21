@@ -21,7 +21,14 @@ class Products extends StatelessWidget {
         onTap: () {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => ProductInfo(),
+              builder: (context) => ProductInfo(
+                Products(
+                  imgpath: imgpath,
+                  name: name,
+                  rating: rating,
+                  price: price,
+                ),
+              ),
             ),
           );
         },

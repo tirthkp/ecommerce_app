@@ -1,9 +1,11 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:ecommerce_app/utils/products.dart';
 import 'package:flutter/material.dart';
 
 class ProductInfo extends StatelessWidget {
-  const ProductInfo({Key? key}) : super(key: key);
+  final Products products;
+  ProductInfo(this.products, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class ProductInfo extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              '\$150.00',
+              '\$${products.price}',
               style: TextStyle(
                 color: Colors.white70,
                 fontSize: 25,
@@ -97,14 +99,14 @@ class ProductInfo extends StatelessWidget {
                 ),
                 Center(
                   child: Image.asset(
-                    'assets/images/img2.png',
+                    products.imgpath,
                   ),
                 ),
                 SizedBox(
                   height: 30,
                 ),
                 Text(
-                  'Nike Air Force X-AC',
+                  products.name,
                   style: TextStyle(
                     color: Colors.white70,
                     fontSize: 25,
@@ -115,7 +117,7 @@ class ProductInfo extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  '4.1⭐ (54)',
+                  '${products.rating}⭐',
                   style: TextStyle(
                     color: Colors.white70,
                     fontSize: 20,
@@ -126,7 +128,7 @@ class ProductInfo extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  '\$150.00',
+                  '\$${products.price}',
                   style: TextStyle(
                     color: Colors.white70,
                     fontSize: 25,
